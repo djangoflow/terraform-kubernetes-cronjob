@@ -13,7 +13,7 @@ resource "kubernetes_cron_job_v1" "gcs_backup" {
             restart_policy       = "OnFailure"
             container {
               image   = "google/cloud-sdk:alpine"
-              name    = "gcs-backup"
+              name    = "cronjob"
               command = var.command
             }
           }
