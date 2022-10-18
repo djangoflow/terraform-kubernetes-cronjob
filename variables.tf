@@ -30,3 +30,9 @@ variable "command" {
   type = list(string)
   default = ["/bin/sh", "-c", "hello world"]
 }
+
+variable "volumes" {
+  type        = any
+  description = "Volume configuration"
+  default     = []
+}
